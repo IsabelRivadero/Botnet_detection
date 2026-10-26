@@ -1,0 +1,14 @@
+services:
+  botfarm-api:
+    build: .
+    container_name: botfarm_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
+      - ./model.joblib:/app/model.joblib
+      - ./flagged_communities.csv:/app/flagged_communities.csv
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped

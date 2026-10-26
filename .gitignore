@@ -1,0 +1,20 @@
+cat > .gitignore <<'EOF'
+# Datos y resultados tabulares: mantener localmente
+*.csv
+
+# Archivos generados por Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Entornos virtuales
+.venv/
+venv/
+venv_bot/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Archivos temporales
+.DS_Store
+EOF
